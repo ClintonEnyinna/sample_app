@@ -68,14 +68,14 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://fast-tundra-08760.herokuapp.com'
+  host = 'https://blooming-hamlet-15716.herokuapp.com/'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
+    :user_name      => apikey,
+    :password       => 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,
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
